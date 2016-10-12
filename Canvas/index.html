@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <!-- this will not be visible in codepen -->
+    <title>Hello World! - Canvas</title>
+    body {
+  font-family: sans-serif;
+  color: #FBF5E3;
+  background: #002B36;
+  margin-left: 3em;
+}
+
+img {
+  margin-left: -2em;
+  margin-bottom: -1em;
+  width: 20%;
+}
+  </head>
+  <body>
+    <img src="http://skilstak.io/assets/header.svg">
+    <br><canvas></canvas>
+    <p>
+      Here is something else in the page.
+    </p>
+    <script>
+      var canvas = document.querySelector("canvas");
+      canvas.width = 400;
+      canvas.height = 80;
+      var ctx = canvas.getContext("2d");
+      ctx.font = "bold 30px Arial";
+      ctx.fillStyle = "goldenrod";
+      ctx.fillText("Hello World! - Canvas",10,60);
+    </script>
+  </body>
+</html>
