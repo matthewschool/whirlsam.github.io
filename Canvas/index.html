@@ -31,10 +31,10 @@ var ctx = canvas.getContext("2d");
 ctx.font = "bold 30px Comic Sans MS";
 
 function drawRainbow (text,x,y) {
-  var colors = ["blue","black","green","blue","black","green"];
+  var colors = ["blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green","blue","black","green"];
   for (i = 0; i < colors.length; i++) {
     ctx.fillStyle = colors[i];
-    ctx.fillText(text, x+ i * 9, y + i * 9)
+    ctx.fillText(text, x+ i * 9, y + i * 9);
   }
 }
 
