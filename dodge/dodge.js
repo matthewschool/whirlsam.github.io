@@ -3,7 +3,7 @@
 var C = {
   background: {
     image: 'assets/background.png',
-    scroll: 700,
+    scroll: 0,
     scale: 1
   },
   dodger: {
@@ -87,7 +87,6 @@ class PlayState {
 
     // background
     this.background = this.add.tileSprite(0,0,320,568,'background');
-    this.background.autoScroll(0,C.background.scroll);
     this.background.scale.set(C.background.scale);
 
     // dodger
