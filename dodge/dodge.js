@@ -121,10 +121,10 @@ class PlayState {
   }
 
   update() {
-    if (this.cursors.a.isDown) {
+    if (this.cursors.left.isDown) {
       this.dodger.body.velocity.x = -C.dodger.speed;
     }
-    if (this.cursors.d.isDown) {
+    if (this.cursors.right.isDown) {
       this.dodger.body.velocity.x = C.dodger.speed;
     }
     if (this.dodgeme.y >= 568) {
