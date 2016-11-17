@@ -118,16 +118,16 @@ class PlayState {
 
     // movement keys
     this.cursors = game.input.keyboard.createCursorKeys();
-    var left = game.input.keyboard.addKey(Phaser.Keyboard.A);
-    var right = game.input.keyboard.addKey(Phaser.Keyboard.D);
+    this.left = game.input.keyboard.addKey(Phaser.Keyboard.A);
+    this.right = game.input.keyboard.addKey(Phaser.Keyboard.D);
   }
 
 
   update() {
-    if (left.isDown) {
+    if (this.left.isDown) {
       this.dodger.body.velocity.x = -C.dodger.speed;
     }
-    if (right.isDown) {
+    if (this.right.isDown) {
       this.dodger.body.velocity.x = C.dodger.speed;
     }
     if (this.dodgeme.y >= 568) {
