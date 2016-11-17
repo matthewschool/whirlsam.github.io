@@ -22,8 +22,8 @@ var C = {
     width: 64,
     height: 64,
     frames: 1,
-    gravity: 500, // set to 0 to just use velocity
-    velocity: 1100 // ignored if gravity > 0
+    gravity: 0, // set to 0 to just use velocity
+    velocity: 1000 // ignored if gravity > 0
   }
 };
 
@@ -118,13 +118,16 @@ class PlayState {
 
     // movement keys
     this.cursors = game.input.keyboard.createCursorKeys();
+    var left = game.input.keyboard.addKey(Phaser.Keyboard.A);
+    var right = game.input.keyboard.addKey(Phaser.Keyboard.D);
   }
 
+
   update() {
-    if (this.cursors.left.isDown) {
+    if (left.isDown) {
       this.dodger.body.velocity.x = -C.dodger.speed;
     }
-    if (this.cursors.right.isDown) {
+    if (right.isDown) {
       this.dodger.body.velocity.x = C.dodger.speed;
     }
     if (this.dodgeme.y >= 568) {
